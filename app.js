@@ -15,6 +15,8 @@ let selectedOp = "";
 let repeatOp = "";
 let repeatCurrentInput = [];
 console.log(currentInput);
+
+
 numberInput.forEach(btn => {
     btn.addEventListener("click", () => {
         let n = currentInput.length;
