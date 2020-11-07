@@ -9,7 +9,7 @@ main{
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background: cadetblue;
+    background: linear-gradient(135deg, hsla(187, 100%, 89%, 1) 0%, hsla(239, 100%, 67%, 1) 100%);
 }
 #title{
     height: 50px;
@@ -23,9 +23,12 @@ main{
     max-width: 400px;
     position: relative;
     margin: 30px auto 0 auto;
-    background: rgb(32, 32, 32);
+    /* background: rgb(32, 32, 32); */
+    background: rgb(60,60,60);
+    background: linear-gradient(120deg, rgba(60,60,60,1) 0%, rgba(33,31,31,1) 53%, rgba(0,0,0,1) 100%);
     border-radius: 10px;
     border: 2px solid black;
+    box-shadow: 20px 20px 5px 0px rgba(0, 0, 0, 0.8);
     padding: 1.8rem;
 }
 #input-container{
@@ -34,9 +37,11 @@ main{
     margin-top: 10px;
     margin-bottom: 30px;
     border-radius: 4px;
-    border: 2px solid black;
+    border: 3px solid black;
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
     text-align: right;
     padding: 12px 12px 8px 0px;
+    background: rgb(199, 223, 196);
     /* vertical-align: baseline; */
 }
 #input-upper{
@@ -56,14 +61,32 @@ main{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
+    grid-column-gap:10px;
+    grid-row-gap: 10px;
 }
 #button-container button{
     font-size: 1.5rem;
     height: 50px;
+    width: auto;
+    cursor: pointer;
     border-style: none;
     border-radius: 3px;
+    /* border: 2px solid transparent; */
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.2s ease;
+}
+#button-container button:focus{
+    outline-style: none;
+    /* box-shadow: 0px 0px 4px 2px rgba(187, 253, 240, 0.5); */
+
+}
+#button-container button:hover{
+    /* border: 2px solid black; */
+    box-shadow: 0px 0px 4px 2px rgba(187, 253, 240, 0.5);
+}
+#backspace, #divide, #multiply, #add, #subtract{
+    background: rgb(39, 39, 39);
+    color: whitesmoke;
 }
 #zero{
     grid-row: 5/6;
@@ -87,4 +110,6 @@ main{
     transform: translate(-50%, 0);
     opacity: 0.6;
     margin: 0 auto 0 auto;
+    /* cursor: none; */
+    pointer-events: none;
 }
